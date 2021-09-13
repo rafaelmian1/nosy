@@ -100,7 +100,7 @@ const Friends = (props) => {
           <div className={styles.friendsList}>
             <h3 className={styles.subtitle}>friends List</h3>
             <div className={styles.listContainer}>
-              {filtered.length > 0 &&
+              {filtered &&
                 filtered.map((friend, index) => (
                   <FriendCard
                     type="friends"
