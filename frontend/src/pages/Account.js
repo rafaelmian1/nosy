@@ -1,26 +1,24 @@
-import styles from '../styles/accounts.module.css'
-import Login from '../components/Login'
-import SignUp from '../components/SignUp'
-import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import { PlayButton } from '../components/Buttons'
-import Loader from '../components/Loader'
-import { connect } from 'react-redux'
+import styles from "../styles/accounts.module.css";
+import Login from "../components/Login";
+import SignUp from "../components/SignUp";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { PlayButton } from "../components/Buttons";
+import Loader from "../components/Loader";
+import { connect } from "react-redux";
 
 const AccountSection = (props) => {
   const [login, setLogin] = useState(false);
-  const [loader, setLoader] = useState(true)
+  const [loader, setLoader] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
-      setLoader(false)
+      setLoader(false);
     }, 2000);
-    // eslint-disable-next-line
-  }, [])
+  }, []);
 
   useEffect(() => {
     props.history.push("/accounts");
-    // eslint-disable-next-line
   }, []);
 
   return (
@@ -86,4 +84,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(AccountSection)
+export default connect(mapStateToProps)(AccountSection);

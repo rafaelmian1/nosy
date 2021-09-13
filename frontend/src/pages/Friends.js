@@ -67,7 +67,9 @@ const Friends = (props) => {
                     );
                   })
                 ) : (
-                  <h2>You don't have friend requests yet 😔</h2>
+                  <h2 style={{ fontFamily: "Ubuntu, sans-serif" }}>
+                    You don't have friend requests yet 😔
+                  </h2>
                 )}
               </div>
             </div>
