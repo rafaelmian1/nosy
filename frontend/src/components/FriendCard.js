@@ -38,11 +38,11 @@ const FriendCard = ({
         <div className={styles.buttons}>
           <button
             id={gameReq ? request.game_id : undefined}
-            onClick={(e) =>
-              gameReq
-                ? props.answerGameRequest(false, e.target.value, e.target.id) &&
-                  props.history.push("/game")
-                : props.answerFriendRequest(false, e.target.value)
+            onClick={
+              (e) =>
+                gameReq
+                  ? Swal.fire("This feature is comming soon!") //props.answerGameRequest(false, e.target.value, e.target.id) &&
+                  : props.answerFriendRequest(false, e.target.value) //props.history.push("/game")
             }
             className={styles.buttonRefuse}
             value={request.user.username}
@@ -120,8 +120,10 @@ const FriendCard = ({
             </div>
           }
           <button
-            onClick={() => {
-              Swal.fire("This feature is comming soon!");
+            onClick={(e) => {
+              gameReq
+                ? props.sendGameRequest(e.target.value)
+                : Swal.fire("This feature is comming soon!");
             }}
             value={friend.username}
           >
@@ -137,7 +139,7 @@ const FriendCard = ({
         type === "sendRequest"
           ? styles.sectionFriendSearched
           : styles.sectionFriend
-      } //type === "acceptRequest" ? styles.section :
+      }
     >
       <div className={styles.container}>{result}</div>
     </section>
