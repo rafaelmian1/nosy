@@ -236,22 +236,22 @@ const usersAccountControllers = {
       }
       const response = accept
         ? {
-          success: true,
-          friend_requests: {
-            invitator: user.friend_requests,
-            invitated: userAdded.friend_requests,
-          },
-          friends: {
-            invitator: user.friends,
-            invitated: userAdded.friends,
-          },
-        }
+            success: true,
+            friend_requests: {
+              invitator: user.friend_requests,
+              invitated: userAdded.friend_requests,
+            },
+            friends: {
+              invitator: user.friends,
+              invitated: userAdded.friends,
+            },
+          }
         : {
-          success: true,
-          friend_requests: {
-            invitated: userNotAdded.friend_requests,
-          },
-        };
+            success: true,
+            friend_requests: {
+              invitated: userNotAdded.friend_requests,
+            },
+          };
 
       res.json(response);
     } catch (error) {
@@ -308,7 +308,7 @@ const usersAccountControllers = {
   },
   deleteReview: async (req, res) => {
     try {
-      await Review.findOneAndDelete({ _id: req.params.id })
+      await Review.findOneAndDelete({ _id: req.params.id });
       res.json({
         success: true,
       });

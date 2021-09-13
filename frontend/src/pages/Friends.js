@@ -38,8 +38,8 @@ const Friends = (props) => {
   };
 
   const sendRequest = (e) => {
-    e.key === 'Enter' && clickHandler()
-  }
+    e.key === "Enter" && clickHandler();
+  };
   return (
     <>
       <div
@@ -100,7 +100,7 @@ const Friends = (props) => {
           <div className={styles.friendsList}>
             <h3 className={styles.subtitle}>friends List</h3>
             <div className={styles.listContainer}>
-              {filtered &&
+              {filtered.length > 0 &&
                 filtered.map((friend, index) => (
                   <FriendCard
                     type="friends"

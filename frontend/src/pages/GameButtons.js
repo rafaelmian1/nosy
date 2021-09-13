@@ -57,7 +57,7 @@ const GameButtons = (props) => {
                       type="friends"
                       friend={friend}
                       key={`${friend.username}${index}`}
-                      game={true}
+                      gameReq={true}
                     />
                   ))}
               </div>
@@ -77,7 +77,7 @@ const GameButtons = (props) => {
                         key={`${req.user.username}${index}`}
                         type={req.creator ? "sentRequest" : "acceptRequest"}
                         request={req}
-                        game={true}
+                        gameReq={true}
                       />
                     );
                   })

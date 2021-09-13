@@ -47,7 +47,7 @@ const App = (props) => {
           });
         }
       );
-      props.socket.on("change_current_player", (username) => { });
+      // props.socket.on("change_current_player", (username) => { });
       props.socket.on("friend_request", ({ username, requests }) => {
         props.setFriendRequests(requests);
         toast(username + " has sent you a friend request!", {
@@ -105,7 +105,12 @@ const App = (props) => {
           path="/selectgame"
           component={!props.token ? Account : GameButtons}
         />
-        <Route path="/admin" component={props.userData && props.userData.admin.flag ? AdminPanel : Home} />
+        <Route
+          path="/admin"
+          component={
+            props.userData && props.userData.admin.flag ? AdminPanel : Home
+          }
+        />
         <Redirect to="/notFound" />
       </Switch>
     </BrowserRouter>

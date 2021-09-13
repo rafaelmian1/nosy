@@ -10,7 +10,7 @@ const FriendCard = ({
   request,
   user,
   friend,
-  game = false,
+  gameReq = false,
   ...props
 }) => {
   const [clicked, setClicked] = useState(false);
@@ -37,9 +37,9 @@ const FriendCard = ({
         </div>
         <div className={styles.buttons}>
           <button
-            id={game && request.game_id}
+            id={gameReq ? request.game_id : undefined}
             onClick={(e) =>
-              game
+              gameReq
                 ? props.answerGameRequest(false, e.target.value, e.target.id) &&
                   props.history.push("/game")
                 : props.answerFriendRequest(false, e.target.value)
@@ -50,9 +50,9 @@ const FriendCard = ({
             REFUSE
           </button>
           <button
-            id={game && request.game_id}
+            id={gameReq ? request.game_id : undefined}
             onClick={(e) =>
-              game
+              gameReq
                 ? props.answerGameRequest(true, e.target.value, e.target.id)
                 : props.answerFriendRequest(true, e.target.value)
             }
@@ -125,7 +125,7 @@ const FriendCard = ({
             }}
             value={friend.username}
           >
-            {game ? "Invite to play" : "Invite to chat"}
+            {gameReq ? "Invite to play" : "Invite to chat"}
           </button>
         </div>
       </div>
