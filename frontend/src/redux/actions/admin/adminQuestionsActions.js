@@ -19,7 +19,6 @@ const adminQuestionActions = {
           newQuestion.correctAnswer,
         newQuestion
       );
-      console.log(response);
       if (response.data.success) {
         dispatch({ type: "ADD_QUESTION", payload: response.data.response });
         return response.data;

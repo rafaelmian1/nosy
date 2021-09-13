@@ -86,7 +86,7 @@ const App = (props) => {
       });
     }
     // eslint-disable-next-line
-  }, [props.socket]);
+  }, [props.socket, props.token]);
 
   return (
     <BrowserRouter>
