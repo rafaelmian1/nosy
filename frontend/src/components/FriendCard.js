@@ -53,7 +53,7 @@ const FriendCard = ({
             id={gameReq ? request.game_id : undefined}
             onClick={(e) =>
               gameReq
-                ? props.answerGameRequest(true, e.target.value, e.target.id)
+                ? Swal.fire("This feature is comming soon!") //props.answerGameRequest(true, e.target.value, e.target.id)
                 : props.answerFriendRequest(true, e.target.value)
             }
             value={request.user.username}
