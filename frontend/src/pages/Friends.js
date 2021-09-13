@@ -56,7 +56,7 @@ const Friends = (props) => {
             <div className={styles.friendsList}>
               <h3 className={styles.subtitle}>friend Requests</h3>
               <div className={styles.listContainer}>
-                {props.userData ? (
+                {props.userData.friend_requests.length > 0 ? (
                   props.userData.friend_requests.map((req) => {
                     return (
                       <FriendCard
