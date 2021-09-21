@@ -70,7 +70,9 @@ const GameButtons = (props) => {
             <div className={styles2.friendsList}>
               <h3 className={styles2.subtitle}>game Requests</h3>
               <div className={styles2.listContainer}>
-                {props.userData ? (
+                {props.userData &&
+                props.userData.game_request.length > 0 &&
+                props.userData.game_request.user ? (
                   props.userData.game_requests.map((req, index) => {
                     return (
                       <FriendCard
@@ -82,7 +84,7 @@ const GameButtons = (props) => {
                     );
                   })
                 ) : (
-                  <h2>You don't have friend requests yet 😔</h2>
+                  <h2>You don't have game requests yet 😔</h2>
                 )}
               </div>
             </div>

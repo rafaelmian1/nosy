@@ -71,14 +71,14 @@ router.route("/mail").post(mailControllers.sendMail);
 
 router
   .route("/review")
-  .post(validatorReview, passport.authenticate("jwt", { session: false }),
+  .post(
+    validatorReview,
+    passport.authenticate("jwt", { session: false }),
     usersAccountsControllers.newReview
   )
   .get(usersAccountsControllers.getReviews);
 
-router
-  .route("/review/:id")
-  .delete(usersAccountsControllers.deleteReview)
+router.route("/review/:id").delete(usersAccountsControllers.deleteReview);
 
 router
   .route("/user/emoji")
@@ -93,4 +93,5 @@ router
     passport.authenticate("jwt", { session: false }),
     usersAccountsControllers.searchUsers
   );
+
 module.exports = router;

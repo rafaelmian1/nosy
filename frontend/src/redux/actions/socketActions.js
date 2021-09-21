@@ -37,7 +37,7 @@ const socketActions = {
           }
         );
         if (!response.data.success) throw new Error();
-        return dispatch({
+        dispatch({
           type: "SET_FRIENDS_LIST",
           payload: response.data.friends_list,
         });

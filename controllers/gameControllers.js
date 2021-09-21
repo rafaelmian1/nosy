@@ -8,9 +8,10 @@ const gameControllers = {
     try {
       if (req.body.username) {
         game = new MultiPlayer({
-          player1: { user: req.user._id },
-          current_player: req.user._id,
+          players: { $push: { user: req.user._id } },
+          current_player: req.user.username,
         });
+
         game = await game.save();
 
         let userInvitated = await User.findOneAndUpdate(
@@ -91,49 +92,23 @@ const gameControllers = {
     const { accept, game_id, username } = req.body;
     try {
       if (accept) {
-        let game = await MultiPlayer.findOneAndUpdate(
-          { _id: game_id },
-          { $set: { player2: { user: req.user._id }, status: true } },
-          { new: true }
-        )
-          .populate({
-            path: "player1",
-            populate: {
-              path: "user",
-              model: "user",
-              select: "username avatar",
-            },
-          })
-          .populate({
-            path: "player2",
-            populate: {
-              path: "user",
-              model: "user",
-              select: "username avatar",
-            },
-          });
         await User.updateMany(
           { "game_requests.game_id": game_id },
           {
             $set: { playing_now: { status: true, game_id } },
-            $pull: { game_requests: { game_id: game_id } },
+            $pull: { game_requests: { game_id } },
           },
           { new: true }
         );
-        let player1 = await User.findOne({
-          username,
-        }).populate({
-          path: "game_requests",
-          populate: {
-            path: "user",
-            model: "user",
-            select: "username avatar connected",
+        let game = await MultiPlayer.findOneAndUpdate(
+          { _id: game_id },
+          {
+            $push: { players: { user: req.user._id } },
+            $set: { status: true },
           },
-        });
-        let player2 = await User.findOne({
-          username: req.user.username,
-        }).populate({
-          path: "game_requests",
+          { new: true }
+        ).populate({
+          path: "players",
           populate: {
             path: "user",
             model: "user",

@@ -18,7 +18,6 @@ const userSchema = mongoose.Schema({
       total: { type: Number, default: 0 },
       wins: { type: Number, default: 0 },
       losses: { type: Number, default: 0 },
-      win_pct: { type: Number, default: 0 },
     },
   },
   playing_now: {
@@ -41,12 +40,16 @@ const userSchema = mongoose.Schema({
   google: { type: Boolean, default: false },
   game_requests: [
     {
-      user: { type: mongoose.Types.ObjectId, path: "user" },
-      game_id: { type: mongoose.Types.ObjectId, path: "multiplayer game" },
+      user: { username: String, avatar: String },
+      game_id: {
+        type: mongoose.Types.ObjectId,
+        path: "multiplayer game",
+      },
       creator: { type: Boolean, default: false },
     },
   ],
   emoji: { type: String, default: "first" },
 });
 
+userSchema.plugin(require("mongoose-autopopulate"));
 module.exports = mongoose.model("user", userSchema);

@@ -24,12 +24,12 @@ const MultiPlayerGame = mongoose.Schema({
       comentario: { type: String, required: true },
     },
   ],
-  current_player: { type: mongoose.Types.ObjectId, path: "user" },
+  current_player: playerSchema,
 });
 
 const SinglePlayerGame = mongoose.Schema({
   status: { type: Boolean, default: true },
-  player: playerSchema,
+  players: playerSchema,
   lifes: { type: Number, default: 5 },
 });
 

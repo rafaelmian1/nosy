@@ -30,7 +30,7 @@ const App = (props) => {
   }, []);
 
   useEffect(() => {
-    if (props.socket && props.token) {
+    if (props.sockek) {
       props.socket.on("game_request", ({ username, requests }) => {
         props.setGameRequests(requests, false);
         toast(username + " invited you to a game!", {
@@ -66,27 +66,27 @@ const App = (props) => {
           );
         }
       );
-      props.socket.on("connected", async (username) => {
+      props.socket.on("connected", (username) => {
         if (
           username !== props.username &&
           props.userData.friends.length > 0 &&
           props.userData.friends.some((friend) => friend.username === username)
         ) {
-          await props.setFriendsList();
+          props.setFriendsList();
         }
       });
-      props.socket.on("disconnection", async (username) => {
+      props.socket.on("disconnection", (username) => {
         if (
           username !== props.username &&
           props.userData.friends.length > 0 &&
           props.userData.friends.some((friend) => friend.username === username)
         ) {
-          await props.setFriendsList();
+          props.setFriendsList();
         }
       });
     }
     // eslint-disable-next-line
-  }, [props.socket, props.token]);
+  }, [props.socket]);
 
   return (
     <BrowserRouter>
