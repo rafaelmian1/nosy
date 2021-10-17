@@ -1,7 +1,7 @@
-import styles from "../styles/game/game.module.css";
+import styles from '../styles/game/game.module.css'
 
 const Nosy = (props) => {
-  const { categoryHandler } = props;
+  const { categoryHandler } = props
   return (
     <div className={styles.nosyContainer}>
       <div className={styles.title}>
@@ -9,65 +9,49 @@ const Nosy = (props) => {
         <p>If you answer correctly you'll win a character</p>
       </div>
       <div className={styles.containerButtons}>
-        {props.game && !props.game.player.medals.includes("Music") && (
+        {props.game && !props.game.player?.medals.includes('Music') && (
           <div className={styles.musicContainer}>
-            <img src="/assets/music.png" alt="" />
-            <button
-              onClick={categoryHandler}
-              className={`${styles.buttonOption} ${styles.music}`}
-            >
+            <img src='/assets/music.png' alt='' />
+            <button onClick={categoryHandler} className={`${styles.buttonOption} ${styles.music}`}>
               Music
             </button>
           </div>
         )}
-        {props.game && !props.game.player.medals.includes("Animals") && (
+        {props.game && !props.game.player?.medals.includes('Animals') && (
           <div className={styles.musicContainer}>
-            <img src="/assets/animals.png" alt="" />
-            <button
-              onClick={categoryHandler}
-              className={`${styles.buttonOption} ${styles.animals}`}
-            >
+            <img src='/assets/animals.png' alt='' />
+            <button onClick={categoryHandler} className={`${styles.buttonOption} ${styles.animals}`}>
               Animals
             </button>
           </div>
         )}
-        {props.game && !props.game.player.medals.includes("Movies and series") && (
+        {props.game && !props.game.player?.medals.includes('Movies and series') && (
           <div>
-            <img src="/assets/movies.png" alt="" />
-            <button
-              onClick={categoryHandler}
-              className={`${styles.buttonOption} ${styles.movies}`}
-            >
+            <img src='/assets/movies.png' alt='' />
+            <button onClick={categoryHandler} className={`${styles.buttonOption} ${styles.movies}`}>
               Movies and series
             </button>
           </div>
         )}
-        {props.game &&
-          !props.game.player.medals.includes("Science: Computers") && (
-            <div>
-              <img src="/assets/computer.png" alt="" />
-              <button
-                onClick={categoryHandler}
-                className={`${styles.buttonOption} ${styles.computers}`}
-              >
-                Science: Computers
-              </button>
-            </div>
-          )}
-        {props.game && !props.game.player.medals.includes("General Knowledge") && (
+        {props.game && !props.game.player?.medals.includes('Science: Computers') && (
           <div>
-            <img src="/assets/cultura.png" alt="" />
-            <button
-              onClick={categoryHandler}
-              className={`${styles.buttonOption} ${styles.knowledge}`}
-            >
+            <img src='/assets/computer.png' alt='' />
+            <button onClick={categoryHandler} className={`${styles.buttonOption} ${styles.computers}`}>
+              Science: Computers
+            </button>
+          </div>
+        )}
+        {props.game && !props.game.player?.medals.includes('General Knowledge') && (
+          <div>
+            <img src='/assets/cultura.png' alt='' />
+            <button onClick={categoryHandler} className={`${styles.buttonOption} ${styles.knowledge}`}>
               General Knowledge
             </button>
           </div>
         )}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Nosy;
+export default Nosy
