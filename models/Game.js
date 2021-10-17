@@ -1,10 +1,10 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose')
 
 const playerSchema = mongoose.Schema({
-  user: { type: mongoose.Types.ObjectId, path: "user" },
+  user: { type: mongoose.Types.ObjectId, path: 'user' },
   questions: [
     {
-      question: { type: mongoose.Types.ObjectId, path: "question" },
+      question: { type: mongoose.Types.ObjectId, path: 'question' },
       answer: { type: Boolean },
     },
   ],
@@ -12,7 +12,7 @@ const playerSchema = mongoose.Schema({
   nosys: { type: Number, default: 0 },
   powers_used: { type: Number, default: 0 },
   coins_spent: { type: Number, default: 0 },
-});
+})
 
 const MultiPlayerGame = mongoose.Schema({
   status: { type: Boolean, default: false },
@@ -25,15 +25,15 @@ const MultiPlayerGame = mongoose.Schema({
     },
   ],
   current_player: playerSchema,
-});
+})
 
 const SinglePlayerGame = mongoose.Schema({
   status: { type: Boolean, default: true },
-  players: playerSchema,
+  player: playerSchema,
   lifes: { type: Number, default: 5 },
-});
+})
 
 module.exports = {
-  singlePlayer: mongoose.model("singleplayer game", SinglePlayerGame),
-  multiPlayer: mongoose.model("multiplayer game", MultiPlayerGame),
-};
+  singlePlayer: mongoose.model('singleplayer game', SinglePlayerGame),
+  multiPlayer: mongoose.model('multiplayer game', MultiPlayerGame),
+}
