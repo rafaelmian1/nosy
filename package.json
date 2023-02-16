@@ -1,0 +1,43 @@
+{
+  "name": "nosy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "engines": {
+    "npm": "6.14.15",
+    "node": "14.18.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "host": "git add . && git commit -m HOST && git push origin master && git push heroku master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanSepulveda/requestion.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanSepulveda/requestion/issues"
+  },
+  "homepage": "https://github.com/DanSepulveda/requestion#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "joi": "^17.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
+    "mongoose": "^6.0.4",
+    "nodemailer": "^6.6.3",
+    "nodemon": "^2.0.20",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "socket.io": "^4.2.0",
+    "socketio-jwt": "^4.6.2"
+  }
+}
