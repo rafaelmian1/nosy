@@ -25,7 +25,7 @@ const adminQuestionActions = {
   updateQuestion: (editedQuestion) => {
     return async () => {
       await apiClient.put(
-        'https://nosygame.rafaelmiandev.com/question/id',
+        'https://nosy.rafaelmiandev.com/question/id',
         editedQuestion
       );
     };

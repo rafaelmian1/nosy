@@ -6478,10 +6478,7 @@
                       case 0:
                         return (
                           (t.next = 2),
-                          q.put(
-                            'https://nosygame.rafaelmiandev.com/question/id',
-                            e
-                          )
+                          q.put('https://nosy.rafaelmiandev.com/question/id', e)
                         )
                       case 2:
                       case 'end':
@@ -8359,7 +8356,7 @@
                 (q.defaults.headers.Authorization = 'Bearer '.concat(s))
               var n = t.socket
                 ? t.socket
-                : Qt()('https://nosygame.rafaelmiandev.com', {
+                : Qt()('https://nosy.rafaelmiandev.com', {
                     query: 'token=' + a.payload.token,
                   })
               return {
