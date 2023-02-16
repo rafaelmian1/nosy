@@ -3190,7 +3190,7 @@
                 className: ge.a.socialMediaLogin,
                 children: Object(p.jsx)(xe.a, {
                   clientId:
-                    '82723603056-v9c263csourgn4qn102de6e8b6oshb3d.apps.googleusercontent.com',
+                    '82723603056-o12gv1mu2alua7qnd7igq2rlrj6he3gg.apps.googleusercontent.com',
                   buttonText: 'Log in',
                   onSuccess: u,
                   autoLoad: !1,
@@ -3376,7 +3376,7 @@
                 className: ge.a.socialMediaLogin,
                 children: Object(p.jsx)(xe.a, {
                   clientId:
-                    '82723603056-v9c263csourgn4qn102de6e8b6oshb3d.apps.googleusercontent.com',
+                    '82723603056-o12gv1mu2alua7qnd7igq2rlrj6he3gg.apps.googleusercontent.com',
                   buttonText: 'Sign up',
                   onSuccess: u,
                   cookiePolicy: 'single_host_origin',
