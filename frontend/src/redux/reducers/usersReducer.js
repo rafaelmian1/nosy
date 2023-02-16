@@ -18,7 +18,7 @@ const usersReducer = (state = initialState, action) => {
 
       let socket = state.socket
         ? state.socket
-        : io('https://nosygame.herokuapp.com', {
+        : io('https://nosygame.rafaelmiandev.com', {
             query: 'token=' + action.payload.token
           });
       return {

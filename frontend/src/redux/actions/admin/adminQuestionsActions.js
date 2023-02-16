@@ -25,7 +25,7 @@ const adminQuestionActions = {
   updateQuestion: (editedQuestion) => {
     return async () => {
       await apiClient.put(
-        'https://nosygame.herokuapp.com/question/id',
+        'https://nosygame.rafaelmiandev.com/question/id',
         editedQuestion
       );
     };

@@ -1,14 +1,14 @@
-import { useState, useEffect } from "react";
-import styles from "../styles/otherpages/terms.module.css";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import { useState, useEffect } from 'react';
+import styles from '../styles/otherpages/terms.module.css';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const Terms = () => {
   useEffect(() => {
-    window.scroll(0, 0)
-  }, [])
+    window.scroll(0, 0);
+  }, []);
 
-  document.title = 'Terms | Nosy'
+  document.title = 'Terms | Nosy';
   const [items, setItems] = useState({
     one: false,
     two: false,
@@ -16,19 +16,19 @@ const Terms = () => {
     four: false,
     five: false,
     six: false,
-    seven: false,
+    seven: false
   });
 
   const showOne = () => {
     if (!items.one) {
       setItems({
         ...items,
-        one: true,
+        one: true
       });
     } else {
       setItems({
         ...items,
-        one: false,
+        one: false
       });
     }
   };
@@ -37,12 +37,12 @@ const Terms = () => {
     if (!items.two) {
       setItems({
         ...items,
-        two: true,
+        two: true
       });
     } else {
       setItems({
         ...items,
-        two: false,
+        two: false
       });
     }
   };
@@ -50,12 +50,12 @@ const Terms = () => {
     if (!items.three) {
       setItems({
         ...items,
-        three: true,
+        three: true
       });
     } else {
       setItems({
         ...items,
-        three: false,
+        three: false
       });
     }
   };
@@ -63,12 +63,12 @@ const Terms = () => {
     if (!items.four) {
       setItems({
         ...items,
-        four: true,
+        four: true
       });
     } else {
       setItems({
         ...items,
-        four: false,
+        four: false
       });
     }
   };
@@ -76,12 +76,12 @@ const Terms = () => {
     if (!items.five) {
       setItems({
         ...items,
-        five: true,
+        five: true
       });
     } else {
       setItems({
         ...items,
-        five: false,
+        five: false
       });
     }
   };
@@ -89,12 +89,12 @@ const Terms = () => {
     if (!items.six) {
       setItems({
         ...items,
-        six: true,
+        six: true
       });
     } else {
       setItems({
         ...items,
-        six: false,
+        six: false
       });
     }
   };
@@ -102,12 +102,12 @@ const Terms = () => {
     if (!items.seven) {
       setItems({
         ...items,
-        seven: true,
+        seven: true
       });
     } else {
       setItems({
         ...items,
-        seven: false,
+        seven: false
       });
     }
   };
@@ -136,8 +136,10 @@ const Terms = () => {
                 <p>
                   Welcome to the web site operated by Daniel San Team (the
                   "Company"), accessible at{` `}
-                  <a href="https://benosy.herokuapp.com/">https://nosy.com/</a>.
-                  "Site" means web sites of the Company and its affiliates,
+                  <a href="https://benosy.rafaelmiandev.com/">
+                    https://nosy.com/
+                  </a>
+                  . "Site" means web sites of the Company and its affiliates,
                   including any web sites on which these terms and conditions of
                   use are posted.
                 </p>
@@ -187,7 +189,7 @@ const Terms = () => {
               <span>
                 <p>You agree to use the Site only for lawful purposes:</p>
                 <p>
-                  (a) Specifically you agree not to do any of the following:{" "}
+                  (a) Specifically you agree not to do any of the following:{' '}
                 </p>
                 <p className={styles.marginleft}>
                   (1) upload to or transmit on the Site any defamatory,
