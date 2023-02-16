@@ -1,0 +1,263 @@
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top > img {
+  width: 300px;
+}
+
+.logo {
+  width: 18vw;
+  height: 8.5vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.logoR {
+  width: 200px;
+  height: 90px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 1.22px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+header nav a,
+footer nav a {
+  margin: 0 15px;
+  height: 17px;
+  text-decoration: none;
+  color: white;
+}
+
+header nav a:hover {
+  border-bottom: 1px solid white;
+}
+
+/* Content Mid */
+
+.middle {
+  margin: 10vh 0;
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Content PageDown */
+
+.pageDown > span {
+  font-family: "ubuntumedium", sans-serif;
+  font-size: 15px;
+  color: #fff;
+  letter-spacing: 2px;
+  text-align: center;
+  line-height: 27px;
+}
+
+.hiddenNavIcon {
+  color: white;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  display: none;
+}
+
+.menuResponsive {
+  background-color: #18157c;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40vw;
+  min-height: 100vh;
+  z-index: 100;
+  padding: 10vh 5vw;
+  position: fixed;
+}
+
+.menuResponsive nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.menuResponsive nav a,
+.menuResponsive p {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  color: white;
+  height: 17px;
+  margin: 2vh 0;
+}
+
+.menuResponsive nav a:hover,
+.menuResponsive nav p:hover,
+.logout {
+  color: #fffc3e;
+  cursor: pointer;
+}
+
+.equisResponsive {
+  height: 30px;
+  position: absolute;
+  right: 3vh;
+  top: 3vh;
+  color: white;
+  cursor: pointer;
+}
+
+.equisResponsive:hover {
+  color: #f0f0f0;
+}
+
+.menuResponsive .logo {
+  margin: 5vh 0;
+  padding: 0;
+}
+
+.socialMediaResponsiveHeader {
+  display: flex;
+  position: absolute;
+  bottom: 5vh;
+}
+
+.socialMediaResponsiveHeader button {
+  margin: 1vw 1vw 0 0;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  padding-bottom: 2vh;
+  border-bottom: 2px solid #2924c2;
+}
+
+.userPic {
+  width: 30px;
+  height: 30px;
+  margin-right: 1vw;
+}
+
+.logoUser {
+  margin: 0 1vmin 0 3vmin;
+}
+
+.arrowDown {
+  width: 15px;
+  height: 15px;
+  margin: 0 0.8vw;
+  margin-top: 0.5vw;
+  cursor: pointer;
+}
+
+.logoutContainer:after {
+  bottom: 100%;
+  right: 11px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-bottom-color: #ffffff;
+  border-width: 6.5px;
+  margin-right: 0px;
+}
+
+.logoutContainer {
+  background-color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 115%;
+  right: 0;
+  width: 90%;
+  border-radius: 10px;
+  color: #18157c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navlinkFriends, .logOutP {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8vh;
+}
+
+.navlinkFriends {
+  width: 100%;
+  color: #18157c;
+  padding: 4vmin 0;
+  border-radius: 10px 10px 0 0;
+  border: none;
+  border-bottom: 1px solid #18157c;
+}
+
+.logOutP {
+  width: 100%;
+  padding: 2.3vmin 0;
+  border-radius: 0 0 10px 10px ;
+  border-top: 1px solid #18157c;
+}
+
+.logoutContainer p:hover {
+  background-color: #FDB739;
+  border-top: 1px solid #18157c;
+}
+
+.navlinkFriends:hover {
+  background-color: #FDB739;
+  border-bottom: 1px solid #18157c;
+}
+
+
+
+@media (max-width: 1124px) {
+  .hiddenNavIcon {
+    display: block;
+  }
+
+  header nav {
+    display: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  .logo {
+    width: 30vw;
+    height: 12.5vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .menuResponsive {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menuResponsive nav {
+    align-items: center;
+  }
+}

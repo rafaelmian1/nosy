@@ -1,0 +1,95 @@
+.adminContainer{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dataContainer{
+    width: 90%;
+    height: 90vh;
+    border: 5px solid white; 
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.headerContainer{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px solid white;
+    align-items: center;
+}
+
+.navContainer{
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    height: 8vh;
+    margin-left: 3vw;
+}
+
+.avatar{
+    height: 8vh;
+    border-radius: 100%;
+}
+
+.user{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-right: 3vw;
+}
+
+.user h3{
+    margin-right: .5em;
+    font-family:"Ubuntu", "sans-serif" ;
+
+}
+
+.spanPanel{
+    color: rgb(240, 240, 240);
+    font-family:"Ubuntu", "sans-serif" ;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin: 0 1vw;
+}
+.active{
+    font-weight: 600;
+    border-bottom: 2px solid white;
+}
+
+.infoSection {
+    flex: 1;
+    height: 80vh;
+}
+
+.iconAvatar{
+    height: 8vh;
+    width: 8vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100%;
+}
+
+
+
+@media (max-width: 1000px) {
+    .dataContainer{
+        min-height: 90vh;
+    }
+    .infoSection{
+        min-height: 80vh;
+    }
+    .dataContainer{
+        overflow: auto;
+    }
+}

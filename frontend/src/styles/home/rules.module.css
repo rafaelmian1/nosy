@@ -1,0 +1,146 @@
+.section{
+  font-family: 'Fredoka One', cursive;
+    width: 100%;
+}
+.section h2{
+  color:#84eeb7;
+  margin-top: 1rem;
+  font-size: 5vmin;
+  text-shadow: -1px 2px 0 #389067;
+  font-weight: 100;
+}
+.section h2, .section p{
+  text-align: center;
+}
+.section p{
+  color: white;
+  font-size: 3.5vmin; 
+  font-family: 'Ubuntu', sans-serif;
+}
+.containerCards{
+  margin:3vmin auto;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+.card{
+  background-color: rgba(25, 22, 61, 0.912);
+  font-family: 'Ubuntu', sans-serif;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:1.5rem;
+  height: auto;
+  border-radius: 3%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 3%;
+  box-shadow: 0 5px 16px 0 rgb(0 0 0 / 58%);
+  padding: 0.5rem;
+}
+
+.card h3{
+  background-color: transparent;
+  color: #e3be31;
+  text-align: center;
+  font-size: 3vmin;
+  font-weight: bold;
+}
+
+.card img{
+  width: 25vmin;
+/*   height: 20%; */
+  margin: 25px 0;
+}
+.card p{
+  font-size: 3vmin;
+  margin: 10px 20px;
+  font-weight: 401;
+  padding-bottom: 8vmin;
+}
+
+@media only screen and (max-width: 1335px) {
+@media only screen and (max-width: 1125px) {
+  .containerCards {
+      grid-template-columns: repeat(3, 33%);
+      gap: 6vmin;
+  }
+}
+}
+
+@media only screen and (max-width: 1024px) {
+  .containerCards {
+      grid-template-columns: repeat(3, 37%);
+      gap: 4vmin;
+  }
+
+  .card p{
+    font-size: 2.6vmin;
+  }
+  
+}
+
+@media only screen and (max-width: 881px) {
+  .containerCards {
+    gap: 2vmin;
+}
+  .card p{
+    font-size: 2vmin;
+    font-weight: 301;
+
+  }
+  
+}
+
+@media only screen and (max-width: 841px) {
+  .card p{
+    font-size: 2vmin;
+  }
+  
+}
+
+@media only screen and (max-width: 768px) {
+  .section h2 {
+    font-size: 5vmin;
+  }
+
+  .containerCards {
+    grid-template-columns: repeat(1, 80%);
+  }
+  .card p {
+    font-size: 3vmin;
+  }
+
+  .card h3 {
+    font-size: 4vmin;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .containerCards{
+    flex-direction: column;
+    gap:5vmin;
+  }
+  .card {
+    width: 100%
+  }
+  .card p {
+    font-size: 4vmin;
+  }
+}
+
+@media (min-width: 500px)  and (max-width: 600px) {
+  .section p {
+    font-size: 4vmim;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .card {
+    height: 480px;
+  }
+  .card p {
+    font-size: 4vmin;
+  }
+}

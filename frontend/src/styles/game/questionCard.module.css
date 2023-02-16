@@ -1,0 +1,273 @@
+.sectionQuestion {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card,
+.infoLifes {
+  width: 100%;
+  height: 95vh;
+  background-color: rgba(47, 41, 106, 0.912);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.2rem 1.5rem;
+  /* justify-content: space-around; */
+/*   gap:1.5rem; */
+
+  box-shadow: 0 5px 16px 0 rgb(0 0 0 / 58%);
+}
+.card {
+  transition: all 0.8s ease;
+  position: relative;
+}
+
+.card h3,
+.infoLifes h3 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 5vmin;
+  color: white;
+  text-align: center;
+}
+.containerGlobal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 75%;
+    width: 100%;
+    align-items: center;
+}
+.containerLogo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.containerLogo h2 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 6vmin;
+  color: white;
+  text-align: center;
+  margin: 1rem 0;
+}
+.containerButtons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonOption,
+.buttonOptionBombed,.button2option {
+  padding: 1rem 2rem;
+  border: none;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 3vmin;
+  background-color: #ceb036;
+  border-radius: 10px;
+  color: white;
+  width: 40%;
+  height: 10vh;
+  cursor: pointer;
+  border-bottom: 5px solid #917a20;
+  transition: all 0.5s;
+  box-shadow: 0 2px 10px 0 rgb(0 0 0 / 35%);
+}
+.correct,.correct2 {
+  background-color: #43b14b;
+  border-bottom: 5px solid #3d8842;
+}
+.incorrect,.incorrect2 {
+  background-color: #cb5b3b;
+  border-bottom: 5px solid #943b23;
+}
+.buttonOptionBombed {
+  background-color: #444;
+  border-bottom: 5px solid rgb(51, 51, 51);
+}
+.logo{
+  width: 10vw;
+}
+.buttonOption:hover {
+  box-shadow: 0 5px 16px 0 rgb(0 0 0 / 58%);
+}
+.infoLifes {
+  align-items: center;
+  justify-content: center;
+}
+.heart {
+  width: 10vw;
+}
+.powersButtons {
+  display: flex;
+  gap: 1rem;
+  padding: 0rem;
+}
+.powersButtons * {
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  display: flex;
+  align-self: center;
+  gap: 0.5rem;
+  width: auto;
+}
+
+.imgPowers {
+  width: 3vw;
+}
+.containerIconsPowers {
+  display: flex;
+  flex-direction: column;
+}
+.imgPowersCoin {
+  width: 1.5vw;
+}
+.containerCoins {
+  display: flex;
+}
+.containerHeaderCard {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+}
+.containerInfoGame {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  height: 100%;
+}
+.imgInfoGame {
+  width: 35px;
+}
+.containerInfoGame span {
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+  font-size: 3vmin;
+}
+.containerSeconds {
+  border-radius: 100%;
+  padding: 0.5rem;
+  background-color: transparent; 
+}
+.containerSeconds p{
+  color: transparent;
+}
+
+.coinInfo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coinInfo img{
+  margin-right: 5px;
+}
+
+.coinInfo span{
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+
+}
+.noMoney{
+  background-color: rgba(82, 76, 76, 0.221);
+  color: rgb(108, 101, 101); 
+  border-radius: 10px;
+  padding: 0.5rem;
+  border-bottom: rgba(68, 68, 68, 0.824);
+  box-shadow: 0 2px 10px 0 rgb(0 0 0 / 35%);
+}
+
+.category {
+  position: absolute;
+  width: 18%;
+  bottom: 0%;
+  left:0%;
+  padding-top: 3vw;
+  padding-right: 5vw;
+  background-color: rgba(255, 255, 255, 0.205);
+  box-shadow: 0 5px 16px 0 rgb(0 0 0 / 58%);
+  border-top-right-radius: 90%;
+  border-bottom-left-radius: 10px;;
+}
+.category h2{
+  font-size:1.3vw ;
+  margin-top: -0.5vw;
+  color:  rgb(0 0 0 / 58%);
+  margin-left: .5vw;
+}
+.imgCategory {
+  width: 7vw;
+  margin-left: .5vw;
+}
+.containerSeconds2{
+width: 100%;
+display: flex;
+justify-content: space-between;
+padding: 0.5rem;
+}
+.seconds {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 0.5rem; */
+  font-size: 6vmin;
+  font-weight: bold;
+  color:#8fedbc;
+  text-shadow: -1px 2px 0 #389067;
+}
+.containerLifeCoins{
+  display: flex;
+  align-items: center;
+  gap:0.5rem;
+}
+.ContainerCoinsTimeLife{
+  display: flex;
+  gap:1rem;
+}
+.coinInfo span{
+  font-size: 3vmin;
+}
+.button2option{
+  width: 8rem;
+}
+.correct2{
+  background-color: #43b14b;
+  border-bottom: 5px solid #3d8842;
+  width: 8rem;
+}
+.incorrect2{
+  background-color: #cb5b3b;
+  border-bottom: 5px solid #943b23;
+  width: 8rem;
+}
+
+
+@media screen and (max-width: 600px) {
+  .logo {
+    width: 25vw;
+  }
+  .containerButtons {
+    margin-top: 5rem;
+  }
+}
+@media screen and (max-width: 540px) {
+  .powersButtons {
+    gap: 0.9rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .powersButtons {
+    gap: 0;
+  }
+  .powersButtons * {
+    width: 40%;
+  }
+}

@@ -1,0 +1,102 @@
+.container dl {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container dd {
+    width: 100%;
+    border-bottom: 1px #8e84f6 solid;
+    padding: 25px 0;
+}
+
+.seven {
+    border-bottom: none;
+}
+
+.container dd a {
+    color: white;
+}
+
+.marginleft {
+    margin-left: 20px;
+}
+
+
+.title {
+    display: flex;
+}
+
+.title svg {
+    width: 26px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.roteDown {
+    transform: rotate(90deg);
+    transition: 0.5s;
+}
+
+.roteUp {
+    transform: rotate(0deg);
+    transition: 0.5s;
+}
+
+.container span {
+    display: flex;
+    flex-direction: column;
+    margin-left: 4%;
+    margin-top: 3vmin;
+    overflow: hidden;
+}
+
+.container span p {
+    margin: 7px 0;
+    line-height: 20px;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 17px;
+    /* font-weight: 4; */
+}
+
+.title h5 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 26px;
+    color: white;
+    letter-spacing: 0;
+    line-height: 27px;
+    cursor: pointer;
+}
+
+.container {
+    margin: 8vh 9%;
+}
+
+.container h1 {
+    margin: 5vmin 0;
+    font-size: 5vmin;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+}
+
+.showSpan {
+    animation: agrandar 2s linear;
+    display: block;
+    height: auto;
+}
+
+.hiddeSpan {
+    display: none;
+}
+
+@keyframes agrandar {
+    0% {
+        display: block;
+        height: 0vh;
+    }
+    100% {
+        height: 50vh;
+    }
+}
